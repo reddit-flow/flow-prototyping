@@ -9,12 +9,13 @@ html, body, #container {
 
 #container {
 	display: grid;
-	grid-template-columns: 1fr 4fr;
+	grid-template-columns: 400px auto;
+	grid-template-rows: auto;
 }
 
 #sidebar-container {
 	display: grid;
-	grid-template-rows: 1fr 18fr 1fr;
+	grid-template-rows: 2.5em auto 2.5em;
 }
 
 #sidebar-top {
@@ -22,8 +23,30 @@ html, body, #container {
 	grid-template-columns: 1fr 1fr 1fr;
 }
 
-#sidebar-content {
-	display: grid;
+#sidebar-content {}
+
+.subreddit {
+	margin-bottom: 10%;
+}
+
+.banner-img {
+	width: 100%;
+}
+
+.subreddit-info {}
+
+.subreddit-name {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.subreddit-subs {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.subreddit-online {
+	color: green;
 }
 
 #user-indicator {
@@ -32,7 +55,7 @@ html, body, #container {
 
 #main-container {
 	display: grid;
-	grid-template-rows: 1fr 19fr;:
+	grid-template-rows: 2.5em auto;
 }
 
 #main-top {
