@@ -3,7 +3,7 @@
 	grid-template-columns: 1fr 4fr;
 }
 
-#sidebar {
+#sidebar-container {
 	display: grid;
 	grid-template-rows: 1fr 18fr 1fr;
 }
@@ -20,12 +20,12 @@
 	display: grid;
 }
 
-#content-container {
+#main-container {
 	display: grid;
 	grid-template-rows: 1fr 19fr;:
 }
 
-#top-bar {
+#main-top {
 	display: grid;
 }
 
