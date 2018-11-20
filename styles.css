@@ -1,3 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body, #container {
+    height: 100%;
+}
+
 #container {
 	display: grid;
 	grid-template-columns: 1fr 4fr;
@@ -10,6 +19,7 @@
 
 #sidebar-top {
 	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
 }
 
 #sidebar-content {
