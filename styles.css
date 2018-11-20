@@ -1,0 +1,34 @@
+#container {
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+}
+
+#sidebar {
+	display: grid;
+	grid-template-rows: 1fr 18fr 1fr;
+}
+
+#sidebar-top {
+	display: grid;
+}
+
+#sidebar-content {
+	display: grid;
+}
+
+#user-indicator {
+	display: grid;
+}
+
+#content-container {
+	display: grid;
+	grid-template-rows: 1fr 19fr;:
+}
+
+#top-bar {
+	display: grid;
+}
+
+#main-content {
+	display: grid;
+}
