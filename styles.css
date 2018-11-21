@@ -1,6 +1,8 @@
 * {
     margin: 0;
     padding: 0;
+
+	font-family: Arial, sans-serif;
 }
 
 html, body, #container {
@@ -73,30 +75,30 @@ html, body, #container {
 .post-header {
     display: grid;
     min-height: 11.875em;
-    margin-bottom: 5px;
-    grid-template-columns: 50px auto;
+    margin-bottom: 0.5em;
+    grid-template-columns: 4em auto;
 }
 
 .votes {
-    display: grid;
-    height: 9.5em;
-    /*margin-top: 1.1875em*/
-    align-self: center;
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 .upvote-button {
-    height: 3em;
-    max-width: 50px;
+	text-align: center;
+	line-height: 3em;
 }
 
 .vote-counter {
+	text-align: center;
     font-size: 3.5em;
-    text-align: center;
 }
 
 .downvote-button {
-    height: 3em;
-    max-width: 50px;
+	text-align: center;
+	line-height: 3em;
 }
 
 .post-header-content {
