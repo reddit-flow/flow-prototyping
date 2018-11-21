@@ -15,7 +15,7 @@ html, body, #container {
 
 #sidebar-container {
 	display: grid;
-	grid-template-rows: 2.5em auto 2.5em;
+	grid-template-rows: 2.5em auto 2.5em;                                       /* If you change these values, make sure to change resizeContainers in window.ts as well*/
 }
 
 #sidebar-top {
@@ -23,7 +23,10 @@ html, body, #container {
 	grid-template-columns: 1fr 1fr 1fr;
 }
 
-#sidebar-content {}
+#sidebar-content {
+	overflow-y: scroll;
+	max-height: 800px;
+}
 
 .subreddit {
 	margin-bottom: 10%;
@@ -55,7 +58,7 @@ html, body, #container {
 
 #main-container {
 	display: grid;
-	grid-template-rows: 2.5em auto;
+	grid-template-rows: 2.5em auto;                                             /* If you change these values, make sure to change resizeContainers in window.ts as well*/
 }
 
 #main-top {
@@ -63,5 +66,6 @@ html, body, #container {
 }
 
 #main-content {
-	display: grid;
+    overflow-y: scroll;
+	max-height: 800px;
 }
