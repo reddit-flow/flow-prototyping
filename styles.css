@@ -69,3 +69,60 @@ html, body, #container {
     overflow-y: scroll;
 	max-height: 800px;
 }
+
+.post-header {
+    display: grid;
+    min-height: 11.875em;
+    margin-bottom: 5px;
+    grid-template-columns: 50px auto;
+}
+
+.votes {
+    display: grid;
+    height: 9.5em;
+    /*margin-top: 1.1875em*/
+    align-self: center;
+}
+
+.upvote-button {
+    height: 3em;
+    max-width: 50px;
+}
+
+.vote-counter {
+    font-size: 3.5em;
+    text-align: center;
+}
+
+.downvote-button {
+    height: 3em;
+    max-width: 50px;
+}
+
+.post-header-content {
+    min-height: 11.875em;
+    background-color: #bfbfbf;
+}
+
+.post-time {
+    font-weight: bold;
+}
+
+.post-user {
+    color: #7f7f7f;
+}
+
+.user-flair {
+    color: #ffffff;
+    background-color: #7f7f7f;
+}
+
+.post-title {
+    font-size: 4em;
+    font-weight: bold;
+}
+
+.post-flair {
+    color: #ffffff;
+    background-color: #ff0000;
+}
