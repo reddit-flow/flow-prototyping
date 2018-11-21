@@ -23,6 +23,8 @@ html, body, #container {
 #sidebar-top {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
+    align-content: center;
+    text-align: center;
 }
 
 #sidebar-content {
@@ -56,6 +58,21 @@ html, body, #container {
 
 #user-indicator {
 	display: grid;
+    justify-content: center;
+    grid-template-columns: 2.5em auto;
+}
+
+.user-image {
+    height: 2.5em;
+    width: 2.5em
+}
+
+.user-name {
+    color: #7f7f7f
+}
+
+.user-karma {
+    font-weight: bold;
 }
 
 #main-container {
