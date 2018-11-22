@@ -19,30 +19,22 @@ html, body, #container {
 
 #sidebar-container {
 	display: grid;
-	grid-template-rows: 2.5em auto 2.5em;                                       /* If you change these values, make sure to change resizeContainers in window.ts as well*/
+	grid-template-rows: 3.5em auto 3.5em;                                       /* If you change these values, make sure to change resizeContainers in window.ts as well*/
 }
 
 #sidebar-top {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
 }
 
 #subreddits-button {
-    height: 2.5em;
-    margin-left: auto;
-    margin-right: auto;
+	vertical-align: middle;
 }
 
 #pm-button {
-    height: 2.5em;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#notifications-button {
-    height: 2.5em;
-    margin-left: auto;
-    margin-right: auto;
+	vertical-align: middle;
 }
 
 #sidebar-content {
@@ -144,7 +136,7 @@ html, body, #container {
 
 #main-container {
 	display: grid;
-	grid-template-rows: 2.5em auto;                                             /* If you change these values, make sure to change resizeContainers in window.ts as well*/
+	grid-template-rows: 3.5em auto;                                             /* If you change these values, make sure to change resizeContainers in window.ts as well*/
 }
 
 #main-top {
@@ -153,7 +145,7 @@ html, body, #container {
     align-content: center;
 }
 
-.subreddit-icon {
+#subreddit-icon {
     height: 2em;
     width: 2em;
     display: inline-block;

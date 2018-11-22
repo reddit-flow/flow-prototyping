@@ -8,9 +8,9 @@
 function resizeContainers() {
     var em = parseFloat(getComputedStyle(document.body).fontSize); //Calculate how many pixels an em is
     document.getElementById("sidebar-content").style.maxHeight = //This is the main content of the sidebar
-        String(innerHeight - em * 5) + "px";
+        String(innerHeight - em * 8) + "px";
     document.getElementById("main-content").style.maxHeight = //This is the main content of the page
-        String(innerHeight - em * 2.5) + "px";
+        String(innerHeight - em * 4) + "px";
 }
 // This code is run whenever the window is resized.
 addEventListener("resize", function () {
