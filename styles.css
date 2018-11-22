@@ -3,6 +3,8 @@
 	padding: 0;
 
 	font-family: Arial, sans-serif;
+
+	background-color: #EBEBEB;
 }
 
 html, body, #container {
@@ -40,8 +42,23 @@ html, body, #container {
 	width: 100%;
 }
 
+.subreddit {
+
+	/* Variables for subs */
+
+	--subreddit-name-color: #323232;
+	--subreddit-subs-color: #555555;
+	--subreddit-stats-divider-color: #D2D2D2;
+	--subreddit-online-color: #42AF00;
+
+	--subreddit-stats-spacing: 0.5em;
+
+}
+
 .subreddit-info {
-	--subreddit-stats-spacing: 0.8em;
+
+	padding: 0.6em 1.5em 0.6em 1.5em;
+
 }
 
 .subreddit-top {
@@ -49,35 +66,45 @@ html, body, #container {
 	flex-direction: row;
 
 	align-items: center;
-	justify-content: center;
+	justify-content: space-between;
+
+	padding-bottom: 0.6em;
 }
 
 .subreddit-name {
 	text-align: center;
-	font-size: 1.5em;
 
-	margin-right: var(--subreddit-stats-spacing);
+	font-size: 1.7em;
+	font-weight: bold;
+
+	color: var(--subreddit-name-color);
 }
 
-.subreddit-subs {
+.subreddit-stats {
 	text-align: center;
-	font-size: 1em;
 
-	margin-left: var(--subreddit-stats-spacing);
-	margin-right: var(--subreddit-stats-spacing);
+	font-size: 1em;
+	font-weight: bold;
 }
 
-.subreddit-online {
-	text-align: center;
-	font-size: 1em;
+.subreddit-stats-subs {
+	border-right: 0.05em solid var(--subreddit-stats-divider-color);
+	padding-right: var(--subreddit-stats-spacing);
 
-	margin-left: var(--subreddit-stats-spacing);
+	color: var(--subreddit-subs-color);
+}
 
-	color: green;
+.subreddit-stats-online {
+	padding-left: var(--subreddit-stats-spacing);
+
+	color: var(--subreddit-online-color);
 }
 
 .subreddit-description {
 	grid-column: span 3;
+
+	text-align: justify;
+	text-justify: inter-character;
 }
 
 #user-indicator {
@@ -114,6 +141,12 @@ html, body, #container {
 }
 
 .post-header {
+
+	/* Variables for posts */
+
+	--post-header-text-color: #555555;
+	--post-header-background-color: #E1E1E1;
+
 	display: grid;
 	min-height: 11.875em;
 	margin-bottom: 0.5em;
@@ -148,7 +181,8 @@ html, body, #container {
 	padding: 1em;
 	border-radius: 0.5em;
 
-	background-color: #EBEBEB;
+	color: var(--post-header-text-color);
+	background-color: var(--post-header-background-color);
 }
 
 .post-time {
