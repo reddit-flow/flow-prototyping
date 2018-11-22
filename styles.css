@@ -198,8 +198,7 @@ html, body, #container {
 }
 
 .upvote-button {
-	text-align: center;
-	line-height: 2em;
+	height: 2em;
 }
 
 .vote-counter {
@@ -208,8 +207,7 @@ html, body, #container {
 }
 
 .downvote-button {
-	text-align: center;
-	line-height: 2em;
+	height: 2em;
 }
 
 .post-header-content {
@@ -224,6 +222,11 @@ html, body, #container {
 }
 
 .post-header-line1 {}
+
+.clock-icon {
+    display: inline;
+    height: 1em;
+}
 
 .post-time {
 	font-weight: bold;
