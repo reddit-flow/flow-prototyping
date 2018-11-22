@@ -1,10 +1,17 @@
+:root {
+
+	/* Global variables */
+
+	--default-background-color: #EBEBEB;
+	--default-separator-color: #D2D2D2;
+
+}
+
 * {
 	margin: 0;
 	padding: 0;
 
 	font-family: Arial, sans-serif;
-
-	background-color: #EBEBEB;
 }
 
 html, body, #container {
@@ -15,11 +22,17 @@ html, body, #container {
 	display: grid;
 	grid-template-columns: 400px auto;
 	grid-template-rows: auto;
+	grid-column-gap: 0.05em;
+
+	background-color: var(--default-separator-color);
 }
 
 #sidebar-container {
 	display: grid;
 	grid-template-rows: 3.5em auto 3.5em;                                       /* If you change these values, make sure to change resizeContainers in window.ts as well*/
+	grid-row-gap: 0.05em;
+
+	background-color: var(--default-separator-color);
 }
 
 #sidebar-top {
@@ -27,6 +40,8 @@ html, body, #container {
 	flex-direction: row;
 	justify-content: space-around;
 	align-items: center;
+
+	background-color: var(--default-background-color);
 }
 
 #subreddits-button {
@@ -40,6 +55,8 @@ html, body, #container {
 #sidebar-content {
 	overflow-y: scroll;
 	max-height: 800px;
+
+	background-color: var(--default-background-color);
 }
 
 .subreddit {
@@ -146,12 +163,17 @@ html, body, #container {
 #main-container {
 	display: grid;
 	grid-template-rows: 3.5em auto;                                             /* If you change these values, make sure to change resizeContainers in window.ts as well*/
+	grid-row-gap: 0.05em;
+
+	background-color: var(--default-separator-color);
 }
 
 #main-top {
     display: grid;
-    grid-template-columns: 4em auto auto;
+    grid-template-columns: 5em auto auto;
     align-content: center;
+
+	background-color: var(--default-background-color);
 }
 
 #subreddit-icon-container {
@@ -193,6 +215,8 @@ html, body, #container {
 #main-content {
 	overflow-y: scroll;
 	max-height: 800px;
+
+	background-color: var(--default-background-color);
 }
 
 .post-header {
@@ -205,7 +229,7 @@ html, body, #container {
 
 	display: grid;
 	margin-bottom: 0.5em;
-	grid-template-columns: 4em auto;
+	grid-template-columns: 5em auto;
 }
 
 .votes {
@@ -235,13 +259,30 @@ html, body, #container {
 	border-radius: 0.5em;
 
 	color: var(--post-header-text-color);
-	background-color: var(--post-header-background-color);
+	background-color: var(--post-header-background-color) !important;
+
     display: grid;
-    grid-template-rows: 1em 2em 1em;
+    grid-template-rows: auto;
     align-content: center;
 }
 
-.post-header-line1 {}
+.post-header-line1 {
+
+	/* Variables for post header line 1 */
+
+	--post-header-spacing: 1em;
+
+	--post-time-spacing: 0.8em;
+	--post-time-divider-color: #565656;
+	--post-time-text-color: #656565;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+	align-items: center;
+
+	background-color: var(--post-header-background-color);
+}
 
 .clock-icon {
     display: inline;
@@ -249,19 +290,38 @@ html, body, #container {
 }
 
 .post-time {
+	border-right: 0.05em solid var(--post-time-divider-color);;
+	margin-left: 0.3em;
+	padding-right: var(--post-time-spacing);
+
+	color: var(--post-time-text-color);
 	font-weight: bold;
 }
 
 .post-user {
+	padding-left: var(--post-time-spacing);
+
 	color: #7f7f7f;
 }
 
 .user-flair {
+	margin-left: 0.4em;
+
+	padding: 0.1em 0.3em;
+	border-radius: 0.3em;
+
 	color: #ffffff;
 	background-color: #7f7f7f;
 }
 
-.post-header-line2 {}
+.post-header-line2 {
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+	align-items: center;
+
+	background-color: var(--post-header-background-color);
+}
 
 .post-title {
 	font-size: 2em;
@@ -269,12 +329,34 @@ html, body, #container {
 }
 
 .post-flair {
+	margin-left: 0.4em;
+
+	padding: 0.1em 0.3em;
+	border-radius: 0.3em;
+
 	color: #ffffff;
 	background-color: #ff0000;
 }
 
-.post-header-buttons {}
+.post-header-buttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+
+	background-color: var(--post-header-background-color);
+}
 
 .post-header-button {
     display: inline-block;
+
+	margin-left: 0.5em;
+}
+
+.post-header-button:nth-child(1) {
+	margin-left: 0;
+}
+
+.post-header-button-first {
+	margin-right: auto;
 }
