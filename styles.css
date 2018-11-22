@@ -116,21 +116,30 @@ html, body, #container {
 }
 
 #user-indicator {
-	display: grid;
+
+	/* Variables for user indicator */
+
+	--user-text-color: #555555;
+
+	display: flex;
 	justify-content: center;
-	grid-template-columns: 2.5em auto;
+	align-items: center;
 }
 
 .user-image {
 	height: 2.5em;
-	width: 2.5em
+	width: 2.5em;
+
+	margin-right: 1em;
 }
 
 .user-name {
-	color: #7f7f7f
+	color: var(--user-text-color)
 }
 
 .user-karma {
+	color: var(--user-text-color);
+
 	font-weight: bold;
 }
 
@@ -141,8 +150,12 @@ html, body, #container {
 
 #main-top {
     display: grid;
-    grid-template-columns: 3em auto auto;
+    grid-template-columns: 4em auto auto;
     align-content: center;
+}
+
+#subreddit-icon-container {
+	text-align: center;
 }
 
 #subreddit-icon {
@@ -151,18 +164,29 @@ html, body, #container {
     display: inline-block;
 }
 
-.subreddit-name-topbar {
+#subreddit-info {
+	display: flex;
+	align-items: center;
+}
+
+#subreddit-name-topbar {
     font-size: 1.5em;
     font-weight: bold;
+
     display: inline-block;
 }
 
-.subreddit-sorting-label {
+#subreddit-sorting-label {
+	margin-left: 1em;
+
     display: inline-block;
 }
 
-.subreddit-sorting {
+#subreddit-sorting {
+	margin-left: 0.5em;
+
     font-weight: bold;
+
     display: inline-block;
 }
 
@@ -175,6 +199,7 @@ html, body, #container {
 
 	/* Variables for posts */
 
+	--post-vote-count-color: #939393;
 	--post-header-text-color: #555555;
 	--post-header-background-color: #E1E1E1;
 
@@ -184,31 +209,26 @@ html, body, #container {
 }
 
 .votes {
-    /*
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-    */
-    display: grid;
-    grid-template-rows: 2em 2.5em 2em;
-    justify-content: center;
-    align-content: center;
-    height: 100%;
 }
 
-.upvote-button {
-	height: 2em;
-}
+.upvote-button {}
 
 .vote-counter {
 	text-align: center;
-	font-size: 2.5em;
+
+	color: var(--post-vote-count-color);
+	
+	font-weight: bold;
+	font-size: 1.5em;
+
+	line-height: 1.6em;
 }
 
-.downvote-button {
-	height: 2em;
-}
+.downvote-button {}
 
 .post-header-content {
 	padding: 1em;
