@@ -42,7 +42,7 @@ html, body, #container {
 
 .subreddit-info {}
 
-.subreddit-name {
+.subreddit-name-sidebar {
 	font-size: 1.5em;
 	font-weight: bold;
 }
@@ -81,7 +81,30 @@ html, body, #container {
 }
 
 #main-top {
-	display: grid;
+    display: grid;
+    grid-template-columns: 3em auto auto;
+    align-content: center;
+}
+
+.subreddit-icon {
+    height: 2em;
+    width: 2em;
+    display: inline-block;
+}
+
+.subreddit-name-topbar {
+    font-size: 1.5em;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.subreddit-sorting-label {
+    display: inline-block;
+}
+
+.subreddit-sorting {
+    font-weight: bold;
+    display: inline-block;
 }
 
 #main-content {
