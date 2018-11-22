@@ -1,12 +1,12 @@
 * {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 
 	font-family: Arial, sans-serif;
 }
 
 html, body, #container {
-    height: 100%;
+	height: 100%;
 }
 
 #container {
@@ -23,8 +23,8 @@ html, body, #container {
 #sidebar-top {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-    align-content: center;
-    text-align: center;
+	align-content: center;
+	text-align: center;
 }
 
 #sidebar-content {
@@ -40,39 +40,62 @@ html, body, #container {
 	width: 100%;
 }
 
-.subreddit-info {}
+.subreddit-info {
+	--subreddit-stats-spacing: 0.8em;
+}
+
+.subreddit-top {
+	display: flex;
+	flex-direction: row;
+
+	align-items: center;
+	justify-content: center;
+}
 
 .subreddit-name-sidebar {
 	font-size: 1.5em;
-	font-weight: bold;
+    text-align: center;
+	margin-right: var(--subreddit-stats-spacing);
 }
 
 .subreddit-subs {
-	margin-left: 10%;
-	margin-right: 10%;
+	text-align: center;
+	font-size: 1em;
+
+	margin-left: var(--subreddit-stats-spacing);
+	margin-right: var(--subreddit-stats-spacing);
 }
 
 .subreddit-online {
+	text-align: center;
+	font-size: 1em;
+
+	margin-left: var(--subreddit-stats-spacing);
+
 	color: green;
+}
+
+.subreddit-description {
+	grid-column: span 3;
 }
 
 #user-indicator {
 	display: grid;
-    justify-content: center;
-    grid-template-columns: 2.5em auto;
+	justify-content: center;
+	grid-template-columns: 2.5em auto;
 }
 
 .user-image {
-    height: 2.5em;
-    width: 2.5em
+	height: 2.5em;
+	width: 2.5em
 }
 
 .user-name {
-    color: #7f7f7f
+	color: #7f7f7f
 }
 
 .user-karma {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 #main-container {
@@ -108,19 +131,19 @@ html, body, #container {
 }
 
 #main-content {
-    overflow-y: scroll;
+	overflow-y: scroll;
 	max-height: 800px;
 }
 
 .post-header {
-    display: grid;
-    min-height: 11.875em;
-    margin-bottom: 0.5em;
-    grid-template-columns: 4em auto;
+	display: grid;
+	min-height: 11.875em;
+	margin-bottom: 0.5em;
+	grid-template-columns: 4em auto;
 }
 
 .votes {
-    display: flex;
+	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
@@ -133,7 +156,7 @@ html, body, #container {
 
 .vote-counter {
 	text-align: center;
-    font-size: 3.5em;
+	font-size: 3.5em;
 }
 
 .downvote-button {
@@ -142,29 +165,33 @@ html, body, #container {
 }
 
 .post-header-content {
-    min-height: 7.5em;
-    background-color: #bfbfbf;
+	min-height: 7.5em;
+
+	padding: 1em;
+	border-radius: 0.5em;
+
+	background-color: #EBEBEB;
 }
 
 .post-time {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 .post-user {
-    color: #7f7f7f;
+	color: #7f7f7f;
 }
 
 .user-flair {
-    color: #ffffff;
-    background-color: #7f7f7f;
+	color: #ffffff;
+	background-color: #7f7f7f;
 }
 
 .post-title {
-    font-size: 2em;
-    font-weight: bold;
+	font-size: 2em;
+	font-weight: bold;
 }
 
 .post-flair {
-    color: #ffffff;
-    background-color: #ff0000;
+	color: #ffffff;
+	background-color: #ff0000;
 }
