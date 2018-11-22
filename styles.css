@@ -171,42 +171,51 @@ html, body, #container {
 	--post-header-background-color: #E1E1E1;
 
 	display: grid;
-	min-height: 11.875em;
 	margin-bottom: 0.5em;
 	grid-template-columns: 4em auto;
 }
 
 .votes {
+    /*
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+    */
+    display: grid;
+    grid-template-rows: 2em 2.5em 2em;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
 }
 
 .upvote-button {
 	text-align: center;
-	line-height: 3em;
+	line-height: 2em;
 }
 
 .vote-counter {
 	text-align: center;
-	font-size: 3.5em;
+	font-size: 2.5em;
 }
 
 .downvote-button {
 	text-align: center;
-	line-height: 3em;
+	line-height: 2em;
 }
 
 .post-header-content {
-	min-height: 7.5em;
-
 	padding: 1em;
 	border-radius: 0.5em;
 
 	color: var(--post-header-text-color);
 	background-color: var(--post-header-background-color);
+    display: grid;
+    grid-template-rows: 1em 2em 1em;
+    align-content: center;
 }
+
+.post-header-line1 {}
 
 .post-time {
 	font-weight: bold;
@@ -220,6 +229,8 @@ html, body, #container {
 	color: #ffffff;
 	background-color: #7f7f7f;
 }
+
+.post-header-line2 {}
 
 .post-title {
 	font-size: 2em;
