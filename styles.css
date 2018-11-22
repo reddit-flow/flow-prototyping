@@ -25,8 +25,24 @@ html, body, #container {
 #sidebar-top {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	align-content: center;
-	text-align: center;
+}
+
+#subreddits-button {
+    height: 2.5em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#pm-button {
+    height: 2.5em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#notifications-button {
+    height: 2.5em;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #sidebar-content {
@@ -190,8 +206,7 @@ html, body, #container {
 }
 
 .upvote-button {
-	text-align: center;
-	line-height: 2em;
+	height: 2em;
 }
 
 .vote-counter {
@@ -200,8 +215,7 @@ html, body, #container {
 }
 
 .downvote-button {
-	text-align: center;
-	line-height: 2em;
+	height: 2em;
 }
 
 .post-header-content {
@@ -216,6 +230,11 @@ html, body, #container {
 }
 
 .post-header-line1 {}
+
+.clock-icon {
+    display: inline;
+    height: 1em;
+}
 
 .post-time {
 	font-weight: bold;
